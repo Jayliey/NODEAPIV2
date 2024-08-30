@@ -30,7 +30,8 @@ useEffect(()=> {
         <div>
             <div>
                 <a href="/create" className="inline-block mt-4 shadow-md bg-blue-600 text-white rounded-sm px-4 py-2 font-bold hover:bg-blue-400 hover:cursor-pointer">Create Product</a>
-            </div>
+                <a href="/graph" className="inline-block mt-4 ml-5 shadow-md bg-blue-600 text-white rounded-sm px-4 py-2 font-bold hover:bg-blue-400 hover:cursor-pointer">View Graph</a>
+            </div>            
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
                 {isLoading ? (
                     "loading"

@@ -22,6 +22,7 @@ const LoginPage = () => {
     try {
         setIsLoading(true);
         const response = await axios.get(`${VITE_BACKEND_URL}/api/login`, {email: email});
+        console.log(response.data);
         if (response.data === ""){
             toast.error("User does not Exist");
             setIsLoading(false);
