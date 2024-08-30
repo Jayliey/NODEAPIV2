@@ -23,11 +23,11 @@ const App = () =>{
 
       <div className="container mx-auto p-2 h-full">
       <Routes>
-        <Route index element={<SignUpPage/>}></Route>
+        <Route index element={<LoginPage/>}></Route>
         <Route path="/home" element={<HomePage/>}></Route>
         <Route path="/create" element={<CreatePage/>}></Route>
         <Route path="/edit/:id" element={<EditPage/>}></Route>
-        <Route path="/Login" element={<LoginPage/>}></Route>
+        <Route path="/signup" element={<SignUpPage/>}></Route>
       </Routes>
       </div>
       <ToastContainer/>

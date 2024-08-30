@@ -19,15 +19,20 @@ const SignUpPage = () => {
             alert('Please fill out all input completely');
             return;
         }
-        try {
-            setIsLoading(true); 
-            const response =await axios.post(`${VITE_BACKEND_URL}/api/signup`,{name: name, email: email, username: user, password: password});
-            toast.success(`Saved ${response.data.name} successfully`);
-            setIsLoading(false);
-            navigate("/home");
-        } catch (error) {
+
+        try {        
+
+                setIsLoading(true); 
+                const response =await axios.post(`${VITE_BACKEND_URL}/api/signup`,{name: name, email: email, username: user, password: password});
+                toast.success(`Saved ${response.data.name} successfully`);
+                setIsLoading(false);
+                navigate("/home");
+
+            }catch (error) {
+
             toast.error(error.message);
             setIsLoading(false);
+
         }
     } 
 
