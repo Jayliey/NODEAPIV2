@@ -2,9 +2,11 @@ import { Routes,Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
 import EditPage from "./pages/EditPage";
+import LoginPage from "./pages/LoginPage";
 
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SignUpPage from "./pages/SignUpPage";
 
 export const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -21,9 +23,11 @@ const App = () =>{
 
       <div className="container mx-auto p-2 h-full">
       <Routes>
-        <Route index element={<HomePage/>}></Route>
+        <Route index element={<SignUpPage/>}></Route>
+        <Route path="/home" element={<HomePage/>}></Route>
         <Route path="/create" element={<CreatePage/>}></Route>
         <Route path="/edit/:id" element={<EditPage/>}></Route>
+        <Route path="/Login" element={<LoginPage/>}></Route>
       </Routes>
       </div>
       <ToastContainer/>
