@@ -12,17 +12,24 @@ const LoginPage = () => {
     const navigate = useNavigate();
    
 
-    const getUser = async() => {
+    const getUser = async(e) => {
+        e.preventDefault();
+        if(email ==="" ||password ===""){
+            alert('Please fill out all input completely');
+            return;
+        }
+
     try {
         setIsLoading(true);
-        const response = await axios.get(`${VITE_BACKEND_URL}/api/login`, {email: email}); 
+        const response = await axios.get(`${VITE_BACKEND_URL}/api/login`, {email: email});
         if (response.data === ""){
             toast.error("User does not Exist");
+            setIsLoading(false);
             navigate("/signup");
         }else{
-            navigate("/home")
-            toast.success(`Welcome ${response.data.name}`);
+            toast.success(`Welcome`);
             setIsLoading(false);
+            navigate("/home");
         }
 
     } catch (error) {

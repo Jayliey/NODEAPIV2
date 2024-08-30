@@ -39,7 +39,7 @@ const EditPage = () => {
         try {
             await axios.put(`${VITE_BACKEND_URL}/api/products/${id}`, product);
             toast.success(`Updated successfully`);
-            navigate("/");
+            navigate("/home");
         } catch (error) {
             setIsLoading(false);
             toast.error(error.message);
