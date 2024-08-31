@@ -19,23 +19,17 @@ const LoginPage = () => {
             return;
         }
 
-    try {
-        setIsLoading(true);
-        const response = await axios.get(`${VITE_BACKEND_URL}/api/login`, {email: email});
-        console.log(response.data);
-        if (response.data === ""){
-            toast.error("User does not Exist");
-            setIsLoading(false);
-            navigate("/signup");
-        }else{
-            toast.success(`Welcome`);
-            setIsLoading(false);
+        try {
+            setIsLoading(true);
+            const response = await axios.post(`${VITE_BACKEND_URL}/api/login`, { email, password });
+            toast.success(response.data.message || 'Login successful');
+            toast.success(`Welcome To Julie's React CRUD`);
             navigate("/home");
+        } catch (error) {
+            toast.error(error.response?.data.message || 'An error occurred');
+        } finally {
+            setIsLoading(false);
         }
-
-    } catch (error) {
-        console.log(error);
-    }
 }
 
     return(

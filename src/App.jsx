@@ -18,7 +18,7 @@ const App = () =>{
       <nav className="bg-gray-800">
         <div className="container mx-auto p-2">
           {/*tried using link but it is clearing the screen so i will stick to this tag*/}
-          <a href="/home"><h2 className="text-white text-2xl font-bold">JULIE's React CRUD</h2></a>
+          <a href="/login"><h2 className="text-white text-2xl font-bold">JULIE's React CRUD</h2></a>
         </div>
       </nav>
 
@@ -29,6 +29,7 @@ const App = () =>{
         <Route path="/create" element={<CreatePage/>}></Route>
         <Route path="/edit/:id" element={<EditPage/>}></Route>
         <Route path="/signup" element={<SignUpPage/>}></Route>
+        <Route path="/login" element={<LoginPage/>}></Route>
         <Route path="/graph" element={<Graph/>}></Route>
 
       </Routes>

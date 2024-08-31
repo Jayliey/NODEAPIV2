@@ -8,33 +8,44 @@ const SignUpPage = () => {
 
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
+    const [isEmailUsed, setIsEmailUsed] = useState(null);
     const [user,setUser] = useState("");
     const [password,setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
 
     const saveUser = async(e) => {
-        e.preventDefault();
-        if(name === "" || email ==="" || user === ""||password ===""){
-            alert('Please fill out all input completely');
-            return;
+                e.preventDefault();
+                if(name === "" || email ==="" || user === ""||password ===""){
+                    alert('Please fill out all input completely');
+                    return;
+                }
+                
+
+        try {
+            //checking the user
+            const response = await axios.post(`${VITE_BACKEND_URL}/api/check`, { email: email });
+
+                if (response.data.exists) {
+                    toast.error('Email already exists. Please use a different email');
+                } else {
+
+                    // Add user code goes here
+                    setIsLoading(true); 
+                    const resp =await axios.post(`${VITE_BACKEND_URL}/api/signup`,{name: name, email: email, username: user, password: password});
+                    toast.success(`Saved ${resp.data.name} successfully`);
+                    toast.success(`Welcome To Julie's React CRUD`);
+                    setIsLoading(false);
+                    navigate("/home");
+                    
+                }
+        }catch(error){
+
+            console.log(error);
+            toast.error('An error occurred');
         }
 
-        try {        
-
-                setIsLoading(true); 
-                const response =await axios.post(`${VITE_BACKEND_URL}/api/signup`,{name: name, email: email, username: user, password: password});
-                toast.success(`Saved ${response.data.name} successfully`);
-                setIsLoading(false);
-                navigate("/home");
-
-            }catch (error) {
-
-            toast.error(error.message);
-            setIsLoading(false);
-
-        }
-    } 
+    }
 
     return(
         <div className="mx-w-lg bg-white shadow-lg mx-auto p-7 rounded mt-6">
