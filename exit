@@ -1,0 +1,47 @@
+[33mcommit 2db4e4d650704a8a893e10df4d0874db002467c3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Sat Aug 31 15:34:02 2024 +0200
+
+    updated routes and userController done using bycrpt
+
+[33mcommit 034b5f845cbb392848d08d7888a01f6c83241330[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Fri Aug 30 20:18:28 2024 +0200
+
+    done with graphs
+
+[33mcommit ab1c82994021882f90c81453f19b9851199690ff[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Fri Aug 30 19:44:58 2024 +0200
+
+    now loging and signing in
+
+[33mcommit 8d8680886436742f57544e258d132cd55103d5bb[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Fri Aug 30 13:51:33 2024 +0200
+
+    updated index element, just before authentisizing
+
+[33mcommit 5a2f9c432cada3f6975978bd12b0c6eb30971783[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Fri Aug 30 11:32:39 2024 +0200
+
+    updated index element, created signup page and login page
+
+[33mcommit b72ac96cecb0bf99082f0cf7dd5e12ce8c639bdb[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Wed Aug 28 07:04:14 2024 +0200
+
+    few updates
+
+[33mcommit 54fe71109d90bcd3dd451cd2a03138fd5647704d[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Wed Aug 28 06:20:29 2024 +0200
+
+    added my chart dependences
+
+[33mcommit 71492e2229799db502c234f9d819fef2c63c7fa8[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Juliet Chirimumimba <chirimumimbajuliet@gmail.com>
+Date:   Sat Aug 17 00:56:00 2024 +0200
+
+    committing all frontend files

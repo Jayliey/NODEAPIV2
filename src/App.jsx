@@ -12,11 +12,12 @@ import SignUpPage from "./pages/SignUpPage";
 export const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const App = () =>{
+
   return(
 
     <div>
       <nav className="bg-gray-800">
-        <div className="container mx-auto p-2">
+        <div className="w-screen container mx-auto p-2">
           {/*tried using link but it is clearing the screen so i will stick to this tag*/}
           <a href="/login"><h2 className="text-white text-2xl font-bold">JULIE's React CRUD</h2></a>
         </div>

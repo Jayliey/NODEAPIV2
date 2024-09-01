@@ -24,7 +24,7 @@ const CreatePage = () => {
             const response =await axios.post(`${VITE_BACKEND_URL}/api/products`,{name: name, quantity: quantity, price: price, image: image});
             toast.success(`Saved ${response.data.name} successfully`);
             setIsLoading(false);
-            navigate("/");
+            navigate("/home");
         } catch (error) {
             toast.error(error.message);
             setIsLoading(false);
