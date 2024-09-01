@@ -4,12 +4,14 @@ import CreatePage from "./pages/CreatePage";
 import EditPage from "./pages/EditPage";
 import LoginPage from "./pages/LoginPage";
 import Graph from "./pages/Graph";
+import Weather from "./pages/WeatherPage";
 
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SignUpPage from "./pages/SignUpPage";
 
-export const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+export const KEY = import.meta.env.KEY;
+export const BASE = import.meta.env.BASE;
 
 const App = () =>{
 
@@ -30,7 +32,7 @@ const App = () =>{
         <Route path="/create" element={<CreatePage/>}></Route>
         <Route path="/edit/:id" element={<EditPage/>}></Route>
         <Route path="/signup" element={<SignUpPage/>}></Route>
-        <Route path="/login" element={<LoginPage/>}></Route>
+        <Route path="/weather" element={<WeatherPage/>}></Route>
         <Route path="/graph" element={<Graph/>}></Route>
 
       </Routes>
