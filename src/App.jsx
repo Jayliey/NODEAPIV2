@@ -10,8 +10,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SignUpPage from "./pages/SignUpPage";
 
-export const KEY = import.meta.env.KEY;
-export const BASE = import.meta.env.BASE;
+export const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const App = () =>{
 
